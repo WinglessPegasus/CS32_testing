@@ -2,6 +2,8 @@
 
 One of the most time-consuming part of project 1 is that we have to test compilation with more than ten version of main files, some of which should successfully compile while some should fail. It is relatively easy to do it on the local computer. Doing it on the remote server manually is another story. Therefore, I created this script to automatically test compilation on the remote server. Hopefully it will alleviate some of your burden and help you focus on the more important part of the project.
 
+**IMPORTANT**: The script is only tested on Mac OS High Sierra Version 10.13.4. You might run into problems if you run it on other operating systems.
+
 ## Prerequisite
 
 This testing script requires you to set up SSH agent in your local computer. Please follow the next few steps:
