@@ -48,4 +48,47 @@ ssh-copy-id YOUR_SEASNET_ACCOUNT@lnxsrv.seas.ucla.edu
 
 Now we are done for the prerequisite.
 
-## Testing Script
+## Use Testing Script
+
+First your need to download the `project1_testing.tar.gz` file above and copy it to the directory that contains your source codes.
+
+Then you are going to decompress it with
+
+```bash
+tar xvzf project1_testing.tar.gz
+```
+
+after which your project folder should look like this:
+
+```bash
+$ ls
+City.cpp  Flatulan.cpp  g32_test.sh  Game.h     History.cpp  main.cpp   Player.cpp  project1_testing.tar.gz
+City.h    Flatulan.h    Game.cpp     globals.h  History.h    main_test  Player.h    utilities.cpp
+```
+
+Now simply enter
+
+```bash
+./g32_test.sh
+```
+
+Enter your SEASNet account according to the prompt. This should start the automatic server compilation process.
+
+The output should look like this:
+
+```text
+Start testing main_test0.cpp...
+Transferring source codes onto server...
+Compiling the source codes on SEASnet server...
+Compilation succeeds as desired.
+
+Start testing main_test1.cpp...
+Transferring source codes onto server...
+Compiling the source codes on SEASnet server...
+Compilation succeeds as desired.
+...
+```
+
+When the compilation outcome does not meet the requirement, for example, when it passes the compilation when it should fail, the grading script will warn you and exit. You can then go to the specific main source code inside `main_test` and try to figure out why.
+
+I hope that this can save you some time.
